@@ -8,12 +8,14 @@ const NewGoal: FC<NewGoalTypes> = ({ onAddGoal }) => {
 
     const goal = useRef<HTMLInputElement>(null);
     const summary = useRef<HTMLInputElement>(null);
+    
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         
         const enteredGoal = goal.current!.value;
         const enteredSummary = summary.current!.value;
+        e.currentTarget.reset();
         onAddGoal(enteredGoal, enteredSummary);
     }
 

@@ -1,4 +1,4 @@
-import { FC, type ReactNode } from "react"
+import { type ReactNode } from "react"
 
 type HintBoxProps = {
     mode: 'hint';
